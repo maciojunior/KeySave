@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { Alert, FlatList, Text, View } from 'react-native';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
 import { Card, CardProps } from '../../components/Card';
@@ -19,7 +19,7 @@ export function Home() {
     const data = response ? JSON.parse(response) : [];
     setData(data);
   }
-
+  
   async function handleRemove(id: string) {
     const response = await getItem();
     const previousData = response ? JSON.parse(response) : [];

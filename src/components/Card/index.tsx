@@ -13,6 +13,7 @@ export type CardProps = {
 type Props = {
   data: CardProps;
   onPress: () => void;
+
 }
 
 export function Card({ data, onPress }: Props) {
